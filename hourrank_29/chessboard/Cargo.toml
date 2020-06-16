@@ -1,0 +1,6 @@
+[package]
+name = "chessboard"
+version = "0.1.0"
+authors = ["Bill Liu <yuan6liu@gmail.com>"]
+
+[dependencies]

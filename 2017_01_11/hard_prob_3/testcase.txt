@@ -1,0 +1,14 @@
+> echo "5 1 BWBWW" | ./a.out 
+0.800000000000
+
+> echo "5 2 BWBWW" | ./a.out 
+1.800000000000
+
+> echo "5 3 BWBWW" | ./a.out 
+2.466666666667
+
+> echo "5 4 BWBWW" | ./a.out 
+3.000000000000
+  
+> echo "5 5 BWBWW" | ./a.out 
+3.000000000000

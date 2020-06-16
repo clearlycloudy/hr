@@ -1,0 +1,13 @@
+2
+abcde
+bc
+3
+0 p
+1 q
+2 w
+abcde
+cde
+2
+0 t
+1 z
+
