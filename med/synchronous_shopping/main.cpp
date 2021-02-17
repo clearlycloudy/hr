@@ -26,10 +26,6 @@ int main() {
             stores[i] |= 1 << type; // bitmask
         }
         assert(stores[i] >= 0 && stores[i] <= 1023);
-        if (i == 0) {
-            dp[i][stores[i]] = 0;
-            q.push_back({i, stores[i]}); // intialize queue with starting point
-        }
     }
     vector<vector<int>> weights(n, vector<int>(n, 0));
     vector<vector<int>> adj(n);
@@ -43,6 +39,8 @@ int main() {
         weights[u][v] = w;
         weights[v][u] = w;
     }
+    dp[0][stores[0]] = 0;
+    q.push_back({0, stores[0]}); // starting state
     while (!q.empty()) {
         auto [node_id, bitpat] = q.front();
         q.pop_front();
