@@ -48,6 +48,7 @@ int prop_up(int current, int parent, vector<vector<int>> &edges,
         }
     }
 
+    // save top 2 max distances, to be used in prop_down
     if (q.size() == 2) {
         int a = q.top();
         q.pop();
@@ -68,11 +69,9 @@ void prop_down(int current, int parent, int parent_parent,
 
     int d_parent = parent != -1 ? dist_parent[parent] + 1 : 0;
 
-    // int d_sibling_best = 0;
     for (auto c : edges[current]) {
         if (c != parent) { // any sibling node
             // thus it is 2 hops from current node
-            // d_sibling_best = max(d_sibling_best, subbranch_max[c] + 2);
             int d_sib = subbranch_max[c] + 2;
             if (dist_sibling[current].size() < 2) {
                 dist_sibling[current].push_back({d_sib, c});
